@@ -33,4 +33,65 @@ footer {
     margin-top: 50px;
     text-align: center;
 }
+
+.navbar {
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color:grey;
+}
+
+.section-title {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title:after {
+    content: "";
+    display: block;
+    width: 50%;
+    border-bottom: 3px solid white;
+}
+
+.section-title::before {
+    content: "";
+    display: block;
+    border-bottom: 3px dashed grey;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+}
+    
     
