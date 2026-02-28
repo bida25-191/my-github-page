@@ -192,9 +192,13 @@ a:hover {
 
 .contact-email {
     color: white;
-    font-weight: 600;
+    font-weight: bold;
+    border-bottom: 2px solid grey;
+    padding-bottom: 2px;
+    transition: 0.3s;
 }
 
 .contact-email:hover {
     color: #ff4d4d;
+    border-bottom: 2px solid #ff4d4d;
 }
