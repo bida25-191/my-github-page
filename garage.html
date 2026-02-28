@@ -31,50 +31,76 @@
 
     </header>
 
+   <section class="car-section">
+  <h2 class="section-title">Vintage Cars</h2>
+
+  <div class="car-container slider-box" data-images="vintage1.jpg,vintage2.jpg,vintage3.jpg">
+    <div class="slider">
+      <button class="prev" type="button">&#10094;</button>
+      <img src="vintage1.jpg" class="car-image" alt="Vintage car">
+      <button class="next" type="button">&#10095;</button>
+    </div>
+
+    <div class="car-description">
+      <p>
+        Vintage machines are timeless symbols of craftsmanship. Built with raw steel and soul,
+        these classics remind us that true power never fades — it only appreciates.
+      </p>
+    </div>
+  </div>
+</section>
+
     <section class="car-section">
-        <h2 class="section-title">Vintage Cars</h2>
+  <h2 class="section-title">Electric Cars</h2>
 
-        <div class="car-container">
-            <div class="slider">
-                <button class="prev">&#10094;</button>
-                <img src="vintage 1.jpg" class="car-image">
-                <button class="next">&#10095;</button>
-            </div>
+  <div class="car-container slider-box" data-images="electric1.jpg,electric2.jpg,electric3.jpg">
+    <div class="slider">
+      <button class="prev" type="button">&#10094;</button>
+      <img src="electric1.jpg" class="car-image" alt="Electric car">
+      <button class="next" type="button">&#10095;</button>
+    </div>
 
-            <div class="car-description">
-                <p>
-                    Vintage machines are timeless symbols of craftmanship.
-                    Built with raw steel and soul, these classics remind us
-                    that true power never fades - it only appreciates.
-                </p>
-            </div>
-        </div>
-    </section>
-            
+    <div class="car-description">
+      <p>
+        Electric cars are the silent revolution of modern performance.
+    Instant torque. Zero hesitation. Pure acceleration delivered the
+    moment your foot touches the pedal. Built with cutting-edge battery
+    technology and engineered precision, these machines redefine speed
+    without the roar of combustion. The future of power is not loud —
+    it’s immediate, relentless.
+      </p>
+    </div>
+  </div>
+</section>
 
 
 
     <footer>
 
-        <p>&copy; 2025 Mario Mogome</p>
+        <p>&copy; 2026 Mario Mogome</p>
 
     </footer>
+    
     <script>
-const images = ["vintage1.jpg", "vintage2.jpg", "vintage3.jpg"];
-let index = 0;
+document.querySelectorAll(".slider-box").forEach((box) => {
+  const images = box.dataset.images.split(",");
+  let idx = 0;
 
-const imgElement = document.querySelector(".car-image");
+  const img = box.querySelector(".car-image");
+  const nextBtn = box.querySelector(".next");
+  const prevBtn = box.querySelector(".prev");
 
-document.querySelector(".next").addEventListener("click", () => {
-    index = (index + 1) % images.length;
-    imgElement.src = images[index];
+  nextBtn.addEventListener("click", () => {
+    idx = (idx + 1) % images.length;
+    img.src = images[idx].trim();
+  });
+
+  prevBtn.addEventListener("click", () => {
+    idx = (idx - 1 + images.length) % images.length;
+    img.src = images[idx].trim();
+  });
 });
-
-document.querySelector(".prev").addEventListener("click", () => {
-    index = (index - 1 + images.length) % images.length;
-    imgElement.src = images[index];
-});
-    </script>
+</script>
     
 </body>
 
