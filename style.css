@@ -180,3 +180,12 @@ footer {
 .topnav .nav-links a:hover{
   color:#999 !important;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff4d4d; 
+}
