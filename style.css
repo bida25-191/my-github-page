@@ -21,9 +21,10 @@ p {
 }
 
 hr {
-    border: 2px solid #444;
-    width: 60%;
-    margin: 20px auto;
+  border: 0;
+  border-top: 2px solid #ff4d4d; /* visible red */
+  width: 60%;
+  margin: 20px auto;
 }
 
 .engine-img {
