@@ -2,6 +2,7 @@ body {
     background-color: #111;
     color: white;
     font-family: Arial, sans-serif;
+    margin: 0;
 }
 
 .hero-title {
@@ -42,6 +43,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
+    border-bottom: 1px solid #333;
 }
 
 .logo {
@@ -56,7 +58,7 @@ footer {
     display: flex;
 }
 
-.nav links li {
+.nav links-li {
     margin-left: 30px;
 }
 
@@ -89,6 +91,7 @@ footer {
 .section-title::before {
     content: "";
     display: block;
+    width: 50%;
     border-bottom: 3px dashed grey;
     position: absolute;
     bottom: -3px;
@@ -103,8 +106,15 @@ footer {
     display: flex;
     align-items: center;
     gap: 40px;
+    background: #1a1a1a;
+    padding: 30px;
+    border-radius: 15px;
+    transition: 0.3s ease;
 }
 
+.car-container:hover {
+    transform: scale(1.02);
+}
 .slider {
     position: relative;
 }
@@ -118,7 +128,7 @@ footer {
 .prev, .next {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
     background: black;
     color: white;
     border: none;
