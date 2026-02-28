@@ -189,3 +189,12 @@ a {
 a:hover {
     color: #ff4d4d; 
 }
+
+.contact-email {
+    color: white;
+    font-weight: 600;
+}
+
+.contact-email:hover {
+    color: #ff4d4d;
+}
