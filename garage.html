@@ -60,19 +60,20 @@
 
     </footer>
     <script>
-    const images = ["vintage1.jpg", "vintage2.jpg", "vintage3.jpg"];
-    let index = 0;
-    
-    const imgElement = document.querySelector(".car-image");
+    const images = ["vintage 1.jpg", "vintage 2.jpg", "vintage 3.jpg"];
+let index = 0;
 
-    document.querySelector(".next").addEventlistener("click", () => {
-        index = (index + 1) % images.length;
-        imgElement.src = images[index];
-    });
-    document.querySelector(".prev").addEventListener("clicks", () => {
-        index = (index - 1 + images.length) % images.length;
-        imgElement.src = images[index];
-    });
+const imgElement = document.querySelector(".car-image");
+
+document.querySelector(".next").addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    imgElement.src = images[index];
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    imgElement.src = images[index];
+});
     </script>
     
 </body>
