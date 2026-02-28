@@ -1,6 +1,7 @@
 body {
-    background-color: #111 !important;
-    color: white !important;
+  background-color: #111 !important;
+  color: #fff !important;
+  font-family: Arial, sans-serif;
 }
 
 p {
