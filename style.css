@@ -1,6 +1,7 @@
 body {
     background-color: #111;
     color: white;
+    font-family: Arial, sans-serif;
 }
 
 .hero-title {
@@ -93,5 +94,51 @@ footer {
     bottom: -3px;
     left: 50%;
 }
-    
-    
+
+.car-section {
+    padding: 60px 80px;
+}
+
+.car-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.slider {
+    position: relative;
+}
+
+.car-image {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%)
+    background: black;
+    color: white;
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev {
+    left: -40px;
+}
+
+.next {
+    right: -40px;
+}
+
+.car-description {
+    max-width: 400px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ccc;
+}
+
