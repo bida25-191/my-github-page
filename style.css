@@ -23,7 +23,7 @@ p {
 
 hr {
   border: 0;
-  border-top: 2px solid #ff4d4d; /* visible red */
+  border-top: 2px solid #ff4d4d; 
   width: 60%;
   margin: 20px auto;
 }
