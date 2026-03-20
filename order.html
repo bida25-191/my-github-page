@@ -81,6 +81,7 @@
           <option>BMW M5 F90</option>
           <option>BMW X5</option>
           <option>BMW i8</option>
+          <option><p><strong>Selected Car:</strong> <span id="selectedCar"></span></p></option>
         </select>
       </div>
 
@@ -138,6 +139,11 @@
           this.reset();
      });
     </script>
+
+     <script>
+document.getElementById("selectedCar").textContent =
+  localStorage.getItem("selectedCar") || "No car selected";
+</script>
 </body>
 
 </html>
