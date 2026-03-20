@@ -65,9 +65,7 @@
 
   <p class="text-danger fw-bold">Price: P1,500,000</p>
 
-  <button class="btn btn-danger" onclick="addToCart('BMW M3 G80', 1500000)">
-    Add to Cart
-  </button>
+  <button onclick="selectCar('BMW M3 G80')" class="btn btn-danger">Select Car</button>
 </div>
 </div>
 </section>
@@ -90,9 +88,7 @@
 
   <p class="text-danger fw-bold">Price: P2,200,000</p>
 
-  <button class="btn btn-danger" onclick="addToCart('BMW M5 F90', 2200000)">
-    Add to Cart
-  </button>
+  <button onclick="selectCar('BMW M5 F90')">Select Car</button>
 </div>
 </div>
 </section>
@@ -114,9 +110,7 @@
 
       <p class="text-danger fw-bold">Price: P1,200,000</p>
 
-      <button class="btn btn-danger" onclick="addToCart('BMW X5',1200000)">
-          Add to Cart
-      </button>
+      <button onclick="selectCar('BMW X5')">Select Car</button>
     </div>
   </div>
 </section>
@@ -139,9 +133,7 @@
 
     <p class="text-danger fw-bold">Price: P1,400,000</p>
 
-    <button class="btn btn-danger" onclick="addToCart('BMW M4 F82',1400000)">
-        Add to Cart
-    </button>
+    <button onclick="selectCar('BMW M4 F82')">Select Car</button>
     </div>
   </div>
 </section>
@@ -165,9 +157,7 @@
 
       <p class="text-danger fw-bold">Price: P1,800,000</p>
 
-      <button class="btn btn-danger" onclick="addToCart('BMW i8',1800000)">
-          Add to Cart
-      </button>
+      <button onclick="selectCar('BMW i8')">Select Car</button>
     </div>
   </div>
 </section>
@@ -220,20 +210,6 @@
         </div>
     </section>
 
-    <section class="container text-white mt-5">
-        <h2> Your Cart</h2>
-
-        <div id="cart"></div>
-
-        <h3 id="total">Total: P0</h3>
-    </section>
-
-    <footer>
-
-        <p>&copy; 2026 Mario Mogome</p>
-
-    </footer>
-    
     <script>
 document.querySelectorAll(".slider-box").forEach((box) => {
   const images = box.dataset.images.split(",");
@@ -256,35 +232,48 @@ document.querySelectorAll(".slider-box").forEach((box) => {
 </script>
 
 <script>
-    let cart = [];
-    let total = 0;
+let cart = [];
+let total = 0;
 
-    function addToCart(name,price) {
-        cart.push({name, price});
-        total += price;
-        updateCart ();
-    }
-    function removeItem(index) {
-        total -= carti[index}.price;
-        carti.splice(index, 1);
-        updateCart();
-    }
-    function updateCart() {
-        let cartDiv = document.getElementById("cart");
-        cartDiv.innerHTML = "";
+function addToCart(name, price) {
+  cart.push({ name, price });
+  total += price;
+  updateCart();
+}
 
-        cart.forEach((item, index) => {
-            cartDiv.innerHTML += '
-              <p>${item.name - P${item.price}
-              <button onclick="removeItem(${index})">Remove</button></p>
-          ';
-        });
+function removeItem(index) {
+  total -= cart[index].price;
+  cart.splice(index, 1);
+  updateCart();
+}
 
-        document.getElementById("total").innerText = "Total: P" + total;
-    }
-    </script>
-        
+function updateCart() {
+  let cartDiv = document.getElementById("cart");
+  cartDiv.innerHTML = "";
+
+  cart.forEach((item, index) => {
+    cartDiv.innerHTML += `
+      <p>
+        ${item.name} - P${item.price}
+        <button onclick="removeItem(${index})">Remove</button>
+      </p>
+    `;
+  });
+
+  document.getElementById("total").innerText = "Total: P" + total;
+}
 </script>
-</body>
 
-</html>
+<script>
+function selectCar(carName) {
+  localStorage.setItem("selectedCar", carName);
+  window.location.href = "order.html";
+}
+</script>
+    <footer>
+
+        <p>&copy; 2026 Mario Mogome</p>
+
+    </footer>
+    
+   
