@@ -19,8 +19,105 @@
 
         <div>
              <ul class="navbar-nav ms-auto">
-               <li class="nav-item">
-                 <a class="nav-link text-white" href="index.html">HOME
-        </div>
+                 <li class="nav-item">
+                        <a class="nav-link active text-danger" href="index.html">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="garage.html">GARAGE</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="about.html">ABOUT</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="order.html">ORDER</a>
+
+                    <li class="nav-item">
+                         <a class="nav-link active text-danger" href="feedback.html">FEEDBACK</a>
+                    </li>
+                 </ul>
+             </div>
+          </div>
+      </nav>
   </header>
+
+  <main class="container my-5 text-white">
+       <h1 class="fw-bold mb-3">Customer Feedback</h1>
+       <p class="mb-4">
+            We value your opinion. Please share your experience with Mario BMW Performance.
+       </p>
+
+       <form id="feedbackForm">
+            <div class="mb-3">
+                 <label for="fullname" class="form-label">Full Name</label>
+                 <input type="text" class="form-control" id="fullName" placeholder=name@example.com required>
+            </div>
+
+            <div class="mb-3">
+                 <label for="email" class="form-label">Email Address</label>
+                 <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+            </div>
+
+            <div class="mb-3">
+                 <label for="rating" class="form-label">Rate Our Website</label>
+                 <select class="form-select" id="rating" required>
+                      <option value="" selected disabled>Select rating</option>
+                      <option>Excellent</option>
+                      <option>Very Good<</option>
+                      <option>Good</option>
+                      <option>Average</option>
+                      <option>Poor</option>
+                 </select>
+            </div>
+
+            <div class="mb-3">
+                 <label class="form-label">What did you like most?</label>
+                 <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="design">
+                      <label class="form-check-label" for="design">Website Design</label>
+                 </div>
+                 <div class="form-check>
+                      <input class="form-check-input" type="checkbox" id="cars">
+                      <label class="form-check-label" for="cars">BMW Car Collection</label>
+                 </div>
+                 <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="navigation">
+                      <label class="form-check-label" for="navigation">Easy Navigation</label>
+                 </div>
+                 <div class="form-check-type="checkbox">
+                      <input class="form-check-input" type="checkbox" id="orderSystem">
+                      <label class="form-check-label" for="orderSystem">Order System</label>
+                 </div>
+               </div>
+ 
+               <div class="mb-3">
+                           <label for=message" class="form-label">Your Feedback</label>
+                           <textarea class="form-control" id="message" rows="5" placeholder="Write your feedback here..."required></textarea>
+                 </div>
+
+                 <button type="submit" class="btn btn-danger">Submit Feedback</button>
+
+                 <p id="feedbackMessage" class="text-succes mt-3" style="display: none;">
+                      Thank you! Your feedback has been recieved.
+                 </p>
+             </form>
+         </main>
+
+         <footer class="bg-black text-center text-white mt-5 p-3">
+              &copy; 2026 Mario Mogome
+         </footer>
+
+         <script>
+          document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+               event.preventDefault();
+               document.getElementById("feedbackMessage").style.display = "block";
+               this.reset();
+          });
+         </script>
+
+</body>
+</html>
+         </script>
 </body>
