@@ -208,3 +208,20 @@ a:hover {
     color: #ff4d4d;
     border-bottom: 2px solid #ff4d4d;
 }
+
+.form-control, .form-select {
+  background-color: #1a1a1a;
+  color: white;
+  border: 1px solid #444;
+}
+
+.form-control::placeholder {
+  color: #aaa;
+}
+
+.form-control:focus, .form-selector:focus {
+    background-color: #1a1a1a;
+    color: white;
+    border-color: #ff4d4d;
+    box-shadow:none;
+}
